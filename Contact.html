@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Me</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700;900&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Rubik', sans-serif;
+      background-color: #0f0f0f;
+      color: #fff;
+      padding: 40px 20px;
+      background-image: linear-gradient(transparent 1px, rgba(255,255,255,0.03) 1px),
+                        linear-gradient(to right, transparent 1px, rgba(255,255,255,0.03) 1px);
+      background-size: 40px 40px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: #1a1a1a;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px #000;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 900;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #ccc;
+      margin-bottom: 30px;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .social-links a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: white;
+      background-color: #2a2a2a;
+      padding: 12px 20px;
+      border-radius: 10px;
+      transition: 0.3s;
+      font-weight: bold;
+    }
+
+    .social-links a:hover {
+      background-color: #444;
+    }
+
+    .social-links img {
+      width: 24px;
+      height: 24px;
+    }
+
+    @media (max-width: 600px) {
+      .social-links {
+        flex-direction: column;
+        gap: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Contact Me</h1>
+    <p>Feel free to reach out to me through social media below.</p>
+
+    <div class="social-links">
+      <a href="https://www.facebook.com/naphatchai.chaisopha" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" />
+        Facebook
+      </a>
+      <a href="https://www.instagram.com/nn.nxght_nine/" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" />
+        Instagram
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>
