@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>Happy New Year 💜</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #b28ddb, #f3e5ff);
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .page {
+            display: none;
+            text-align: center;
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        /* หน้า 1 : ซองจดหมาย */
+        .envelope {
+            width: 320px;
+            height: 220px;
+            background: #7a3eb1;
+            border-radius: 15px;
+            position: relative;
+            cursor: pointer;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+            transition: transform 0.3s;
+        }
+
+        .envelope:hover {
+            transform: scale(1.05);
+        }
+
+        .flap {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #8e5ac8;
+            clip-path: polygon(0 0, 100% 0, 50% 55%);
+            border-radius: 15px;
+        }
+
+        /* ดอกไม้ตกแต่ง */
+        .flower {
+            position: absolute;
+            font-size: 26px;
+            pointer-events: none; /* สำคัญ: ไม่บังการคลิก */
+        }
+
+        .flower.one { top: 15px; left: 20px; }
+        .flower.two { bottom: 18px; right: 22px; }
+        .flower.three { top: 70px; right: 45px; }
+
+        .hint {
+            margin-top: 15px;
+            color: #5e2d91;
+            font-size: 14px;
+        }
+
+        /* หน้า 2 : การ์ด */
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            max-width: 420px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        h1 {
+            color: #7a3eb1;
+        }
+
+        p {
+            color: #555;
+            font-size: 17px;
+            line-height: 1.6;
+        }
+
+        .heart {
+            font-size: 40px;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+
+<!-- หน้า 1 -->
+<div class="page active" id="page1">
+    <div class="envelope" onclick="goNext()">
+        <div class="flap"></div>
+
+        <!-- ดอกไม้ -->
+        <div class="flower one">🌸</div>
+        <div class="flower two">🌼</div>
+        <div class="flower three">💜</div>
+    </div>
+    <div class="hint">💌 คลิกเพื่อเปิดจดหมาย</div>
+</div>
+
+<!-- หน้า 2 -->
+<div class="page" id="page2">
+    <div class="card">
+        <h1>🎆 Happy New Year 🎆</h1>
+        <p>
+            ขอให้ปีใหม่นี้เป็นปีที่ใจดีกับพ่อแม่แล้วก็น้องนะ
+            มีรอยยิ้มในทุกๆวัน  
+            และมีความสุขกับเรื่องเล็กๆ รอบตัว 💜
+        </p>
+
+        <p>
+            ปีนี้พี่อาจจะไม่ได้กลับไปหาแต่ก็ขอให้ที่บ้านดูแลตัวเองกันด้วยนะน้องก็อย่าดื้ออย่าซนกับพ่อกับแม่มากละ
+            เวลาเจอปัญหาอะไรที่ไม่กล้าบอกพ่อกับแม่มาบอกพี่ได้เสมอพี่ชายคนนี้อยู่กับเองเสมอละฝากบอกพ่อกับแม่ด้วย
+            ว่าอย่าเครียดเยอะเดี๋ยวแก่ไวหรอกขอให้ปีหน้าเป็นปีที่ดีสำหรับทั้งบ้านนะขอให้พ่อกับแม่สุขภาพร่างกายแข็งแรงมากๆครับ😊
+        </p>
+
+        <div class="heart">💖✨</div>
+
+        <p style="text-align:right;">
+            จากเด็กที่คอยชอบพี่มาตลอด
+        </p>
+    </div>
+</div>
+
+<script>
+    function goNext() {
+        document.getElementById("page1").classList.remove("active");
+        document.getElementById("page2").classList.add("active");
+    }
+</script>
+
+</body>
+</html>
